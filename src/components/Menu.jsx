@@ -47,13 +47,11 @@ const Menu = () => {
       .timeline({
         scrollTrigger: {
           trigger: '#menu',
-          start: 'top 80%',
-          end: 'bottom 30%',
-          scrub: true,
+          start: 'top center',
         },
       })
-      .to('.m-left-leaf', { y: -100 })
-      .to('.m-right-leaf', { y: 100 }, '<');
+      .to('#m-right-leaf', { y: -50, duration: 1, ease: 'power1.inOut' })
+      .to('#m-left-leaf', { y: -50, duration: 1, ease: 'power1.inOut' }, '<');
   }, [currentIndex]);
 
   const totalCocktails = sliderLists.length;
